@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "name": "Run RTL (Verilator)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/obj_dir/VTBdesign",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "preLaunchTask": "verilator build + run"
+        }
+    ]
+}

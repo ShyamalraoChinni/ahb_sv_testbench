@@ -1,0 +1,27 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "verilator build + run",
+            "type": "shell",
+            "command": "bash",
+            "args": [
+                "-c",
+                "verilator --binary --trace --timing -Wno-WIDTHTRUNC --prefix VTBdesign design.sv testbench.sv && ./obj_dir/VTBdesign"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "wave gtk",
+            "type": "shell",
+            "command": "gtkwave",
+            "args": [
+                "wave.vcd"
+            ]
+        }
+    ]
+}
